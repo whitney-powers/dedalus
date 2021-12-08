@@ -1,8 +1,8 @@
 """
-Plot spherical snapshots.
+Plot orb to ponder.
 
 Usage:
-    plot_sphere.py <files>... [--output=<dir>]
+    ponder_orb.py <files>... [--output=<dir>]
 
 Options:
     --output=<dir>  Output directory [default: ./frames_sphere]
@@ -50,7 +50,7 @@ def main(filename, start, count, output):
     # stride args allows to determine image quality 
     # stride = 1 work slow
     ax.plot_surface(-1, 12/6.75*Y1, -Z1, rstride=1, cstride=1, facecolors=arr)
-    #ax.plot_surface(-1, 12/6.75*Y1, -Z1, facecolors=arr)
+    # This is not the best way to do this but it works
 
     # Plot writes
     with h5py.File(filename, mode='r') as file:
